@@ -94,7 +94,10 @@ export const ViewWishes = () => {
         <input
           type="text"
           value={input}
-          onChange={(e) => setInput(e.target.value)}
+          onChange={(e) => {
+            setCurrentPage(1);
+            setInput(e.target.value);
+          }}
           placeholder="Nhập tên người muốn tìm"
           className="border outline-none px-3 py-1 rounded hover:border-blue-500 focus:border-blue-500 w-[350px] max-sm:w-[200px]"
         />
